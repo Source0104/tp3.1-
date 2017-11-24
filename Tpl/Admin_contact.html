@@ -1,0 +1,151 @@
+	<include file="./Tpl/Public/top.html" />
+
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+			<!-- #section:basics/sidebar -->
+		<div id="sidebar" class="sidebar responsive">
+		<include file="./Tpl/Public/left.html" />
+		</div>
+
+			<!-- /section:basics/sidebar -->
+			<div class="main-content">
+				<!-- #section:basics/content.breadcrumbs -->
+				<div class="breadcrumbs" id="breadcrumbs">
+					<ul class="breadcrumb">
+						<li>
+							<i class="ace-icon fa fa-home home-icon"></i>
+							<a href="index.html">UI库首页</a>
+						</li>
+					</ul><!-- /.breadcrumb -->
+
+					<!-- #section:basics/content.searchbox -->
+					<div class="nav-search" id="nav-search">
+						<form class="form-search">
+							<span class="input-icon">
+								<input type="text" placeholder="请输入关键字 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+								<i class="ace-icon fa fa-search nav-search-icon"></i>
+							</span>
+						</form>
+					</div><!-- /.nav-search -->
+					<!-- /section:basics/content.searchbox -->
+				</div>
+
+				<div class="page-content">
+					<!-- /section:settings.box -->
+					<div class="page-content-area">
+
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="row center">
+								<div class="row">
+							<div class="col-xs-12">
+							   <!--  <form action="" method='POST' enctype='multipart/form-data' id="form"> 
+							        <div class="form-group">  
+							          <label for="exampleInputFile">上传头像</label>  
+							          <input type="file" name="log" id="file_img" >  
+							        </div>  
+							    </form> --> 
+						<form class="form-horizontal" action="{:U('Admin/contact')}" method="post" >
+								<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 公司地址</label>
+										<div class="col-sm-9">
+											<input type="text" name="address" id="form-field-1" placeholder="输入公司地址" value="{$data['address']}" class="col-xs-10 col-sm-5" />
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 手机号</label>
+										<div class="col-sm-9">
+											<input type="text" name="phone" id="form-field-1" placeholder="输入联系人手机号" value="{$data['phone']}" class="col-xs-10 col-sm-5" />
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 联系人</label>
+										<div class="col-sm-9">
+											<input type="text" name="contact" id="form-field-1" placeholder="输入公司联系人" value="{$data['contact']}" class="col-xs-10 col-sm-5" />
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 公司email</label>
+										<div class="col-sm-9">
+											<input type="text" name="email" id="form-field-1" placeholder="输入公司email" value="{$data['email']}" class="col-xs-10 col-sm-5" />
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 公司地址经度</label>
+										<div class="col-sm-9">
+											<input type="text" name="lng" id="form-field-1" placeholder="输入公司地址经度" value="{$data['lng']}" class="col-xs-10 col-sm-5" />
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 公司地址纬度</label>
+										<div class="col-sm-9">
+											<input type="text" name="lat" id="form-field-1" placeholder="输入公司地址纬度" value="{$data['lat']}" class="col-xs-10 col-sm-5" />
+										</div>
+									</div>
+									<div  class="clearfix form-actions">
+										<div align="center">
+											<button class="btn btn-info" type="submit">
+												<i class="ace-icon fa fa-check bigger-110"></i>
+												立即提交
+											</button>
+									  </div>
+									</div>
+						</form>
+							</div>
+									</div>
+									</div>
+								</div>
+							</div>
+					 </div> <!-- /.row -->
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content-area -->
+				</div><!-- /.page-content -->
+			</div><!-- /.main-content -->
+
+		<include file="./Tpl/Public/footer.html" />
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!--[if !IE]> -->
+			<script type="text/javascript">
+				window.jQuery || document.write("<script src='../public/assets/js/jquery.min.js'>"+"<"+"/script>");
+			</script>
+		<!-- <![endif]-->
+		<!--[if IE]>
+			<script type="text/javascript">
+			 window.jQuery || document.write("<script src='../public/assets/js/jquery1x.min.js'>"+"<"+"/script>");
+			</script>
+		<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='../public/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="../public/assets/js/bootstrap.min.js"></script>
+		<!--[if lte IE 8]>
+		  <script src="../public/assets/js/excanvas.min.js"></script>
+		<![endif]-->
+		<script src="../public/assets/js/jquery-ui.custom.min.js"></script>
+		<script src="../public/assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="../public/assets/js/ace.min.js"></script>
+				<!-- 		<script>
+						$('#file_img').change(function(){      
+							var fd = new FormData();  
+					         fd.append("upfile", $("#file_img").get(0).files[0]);  
+					      $.ajax({  
+					        url: "{:U('Upload/upload')}",  
+					        type:"post",  
+					        processData: false,  
+					        contentType: false,  
+					        data:fd,  
+					        success:function(data){  
+					  			alert(data);
+					        }  
+					      });  
+   }); 
+				</script> -->
+	</body>
+</html>
