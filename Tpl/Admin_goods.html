@@ -1,0 +1,98 @@
+	<include file="./Tpl/Public/top.html" />
+
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+			<!-- #section:basics/sidebar -->
+		<div id="sidebar" class="sidebar responsive">
+		<include file="./Tpl/Public/left.html" />
+		</div>
+
+			<!-- /section:basics/sidebar -->
+			<div class="main-content">
+				<!-- #section:basics/content.breadcrumbs -->
+				<div class="breadcrumbs" id="breadcrumbs">
+					<ul class="breadcrumb">
+						<li>
+							<i class="ace-icon fa fa-home home-icon"></i>
+							<a href="index.html">网站设置</a>
+						</li>
+					</ul><!-- /.breadcrumb -->
+
+					<!-- #section:basics/content.searchbox -->
+					<!-- /.nav-search -->
+					<!-- /section:basics/content.searchbox -->
+				</div>
+
+				<div class="page-content">
+					<!-- /section:settings.box -->
+					<div class="page-content-area">
+
+						<div class="row">
+						<div class="col-xs-12" style="text-align:right">
+						<a href="{:U('Admin/goodsadd')}"><button  class="btn btn-success"  id="bootbox-options">添加商品+</button></a>
+						<div class="hr hr-dotted hr-16"></div>
+						</div>
+							<div class="col-xs-12">
+							<div class="row-fluid">
+									<ul class="ace-thumbnails">
+									<?php foreach($data as $v){ ?>
+										<li>
+											<a href="<?php echo $v['img']; ?>" data-rel="colorbox">
+												<img alt="150x150" style="width:150px;height:150px" src="<?php echo $v['img']; ?>" />
+												<div class="text">
+													<div class="inner">{$v['content']}</div>
+												</div>
+											</a>
+											<div class="tools tools-bottom">
+												<a href="{:U('Admin/goodsadd',array('id'=>$v['id']))}">
+													<i class="icon-pencil"></i>
+												</a>
+
+												<a href="#">
+													<i class="icon-remove red"></i>
+												</a>
+											</div>
+										</li>
+										<?php } ?>
+									</ul>
+								</div><!-- PAGE CONTENT ENDS -->
+								</div>
+							</div>
+					 </div> <!-- /.row -->
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content-area -->
+				</div><!-- /.page-content -->
+			</div><!-- /.main-content -->
+
+		<include file="./Tpl/Public/footer.html" />
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!--[if !IE]> -->
+			<script type="text/javascript">
+				window.jQuery || document.write("<script src='__PUBLIC__/assets/js/jquery.min.js'>"+"<"+"/script>");
+			</script>
+		<!-- <![endif]-->
+		<!--[if IE]>
+			<script type="text/javascript">
+			 window.jQuery || document.write("<script src='../public/assets/js/jquery1x.min.js'>"+"<"+"/script>");
+			</script>
+		<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='__PUBLIC__/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="__PUBLIC__/assets/js/bootstrap.min.js"></script>
+		<!--[if lte IE 8]>
+		  <script src="../public/assets/js/excanvas.min.js"></script>
+		<![endif]-->
+		<script src="__PUBLIC__/assets/js/jquery-ui.custom.min.js"></script>
+		<script src="__PUBLIC__/assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="__PUBLIC__/assets/js/ace-elements.min.js"></script>
+		<script src="__PUBLIC__/assets/js/ace.min.js"></script>
+	</body>
+</html>
