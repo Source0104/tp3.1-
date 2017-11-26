@@ -1,6 +1,6 @@
 <?php 
 /**
-* 
+* 后台管理
 */
 class AdminAction extends Action {
 	
@@ -42,7 +42,7 @@ class AdminAction extends Action {
 			$upload->maxSize  = 3145728 ;// 设置附件上传大小
 			$upload->allowExts  = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
 			$upload->uploadReplace= true;
-			$upload->savePath =  './Public/Uploads/';// 
+			$upload->savePath =  '/Public/Uploads/';// 
 			if(!$upload->upload()) 
 			{// 上传错误提示错误信息
 			}
@@ -53,8 +53,8 @@ class AdminAction extends Action {
 			// 保存表单数据 包括附件数据
 			$g=M('basic');
 			if($info){
-			$data['logo']="../Public/Uploads/".$info[0]['savename'];
-			$data['file']="../Public/Uploads/".$info[1]['savename'];	
+			$data['logo']="/Public/Uploads/".$info[0]['savename'];
+			$data['file']="/Public/Uploads/".$info[1]['savename'];	
 			}
 			$data['title']=$this->_POST('title');
 			
@@ -99,6 +99,35 @@ class AdminAction extends Action {
 			$this->display();
 		}
 	}
+	public function goods(){
+			$g=M('goods');
+			$i=$g->select();
+		    $this->assign('data',$i);
+			$this->display();
+	}
+	public function goodsadd($id=''){
+		if($this->_post()){
+			$data=$this->_POST();
+			$g=M('goods');
+			$data['content']=$this->_POST('content');
+			$data['img']=$this->_POST('img');
+			if($id){
+			$g->where("id=$id")->save($data);
+			$this->success('修改成功',U('goods'));
+			}else{
+			$g->add($data);
+			$this->success('添加成功',U('goods'));
+			}			
+		}else{
+			$g=M('goods');
+			if($id){
+			$i=$g->where("id=$id")->find();
+		    $this->assign('data',$i);
+			}
+			$this->display();
+		}
+	}
+	
 
 }
 
