@@ -1,6 +1,6 @@
 <?php 
 /**
-* 后台管理
+* 
 */
 class AdminAction extends Action {
 	
@@ -127,7 +127,64 @@ class AdminAction extends Action {
 			$this->display();
 		}
 	}
-	
+	public function news(){
+			$g=M('news');
+			import('ORG.Util.Page');
+			$count      = $g->count();
+			$Page       = new Page($count,10);
+			$show       = $Page->show();
+			$i=$g->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+		    $this->assign('data',$i);
+		    $this->assign('page',$show);// 赋值分页输出
+			$this->display();
+	}
+	public function newsadd($id=''){
+		if($this->_post()){
+			$data=$this->_POST();
+			$g=M('news');
+			$data['edittime']=time();
+			if($id){
+			$g->where("id=$id")->save($data);
+			$this->success('修改成功',U('news'));
+			}else{
+			$data['addtime']=time();
+			$g->add($data);
+			$this->success('添加成功',U('news'));
+			}			
+		}else{
+			$g=M('news');
+			if($id){
+			$i=$g->where("id=$id")->find();
+		    $this->assign('data',$i);
+			}
+			$this->display();
+		}
+	}
+	public function newsdel($id){
+		$a=M('news');
+		$a->where("id=$id")->delete();
+		$this->success('删除成功',U('news'));
+
+	}
+	public function goodsdel($id){
+		$a=M('goods');
+		$a->where("id=$id")->delete();
+		$this->success('删除成功',U('goods'));
+
+	}
+	public function message(){
+		$g=M('message');
+		import('ORG.Util.Page');// 导入分页类
+		$count      = $g->count();// 查询满足要求的总记录数
+		$Page       = new Page($count,10);// 实例化分页类 传入总记录数和每页显示的记录数
+		$show       = $Page->show();// 分页显示输出
+		// 进行分页数据查询 注意limit方法的参数要使用Page类的属性
+		$i=$g->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+	    $this->assign('data',$i);
+	    $this->assign('page',$show);
+		$this->display();
+	}
+
 
 }
 
