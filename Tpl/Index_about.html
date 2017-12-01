@@ -1,0 +1,109 @@
+    <include file="./Tpl/Public/index_top.html" />
+
+    <body>
+        <div class="header about-top" id="home">
+            <nav class="navbar navbar-default Torque-nav">
+              <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <h1><a class="navbar-brand" href="index.html">{$data[title]}</a></h1>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right torq-menu">
+                    <li><a href="{:U('index')}">首页</a></li>
+                    <li><a href="{:U('about')}">关于我们</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="<?php echo U('products'); ?>">产品展示</a></li>
+                        <li><a href="<?php echo U('short'); ?>">Short codes</a></li>
+                      </ul>
+                    </li>
+                     <li><a href="<?php echo U('contact'); ?>">联系我们</a></li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+    <div class="clearfix"></div>
+              </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+      <!--   <div class="about-bottom">
+          <div class="container">
+             <h2>About</h2>
+              <div class="approach">
+                  <div class="row">
+                      <div class="col-md-4 col-sm-4 approach-grid">
+                          <div class="aprch-img-list">
+                              <img src="__PUBLIC__/images/abt.jpg" alt="" class="aprch-img-wid" />
+                          </div>
+                            <h3>Lorem ipsum</h3>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4 approach-grid">
+                          <div class="aprch-img-list">
+                              <img src="__PUBLIC__/images/abt2.jpg" alt="" class="aprch-img-wid" />
+                          </div>
+                            <h3>Lorem ipsum</h3>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+                     </div>
+                      <div class="col-md-4 col-sm-4 approach-grid">
+                        <div class="aprch-img-list">
+                              <img src="__PUBLIC__/images/abt1.jpg" alt="" class="aprch-img-wid" />
+                          </div>
+                            <h3>Lorem ipsum</h3>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+                      </div>
+          <div class="clearfix"></div>
+                  </div>
+              </div>
+          </div>
+      </div> -->
+        <div class="quality">
+            <div class="container">
+                <h3>关于我们Quality Statement</h3>
+                <div class="quality-frame">
+                    {$data[content]}
+            <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+<!--         <div class="memberships">
+    <h3>Membership</h3>
+    <div class="container">
+        <div class="col-md-4 col-sm-4 col-xs-4 member-grid">
+            <ul class="member-list">
+                <li><a href="#">Ipsum dolor sit amet юмористические.</a></li>
+                <li><a href="#">Ipsum dolor sit amet, например.</a></li>
+                <li><a href="#">Ipsum например, юмористические.</a></li>
+                <li><a href="#">Ipsum dolor sit amet.</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4 member-grid">
+            <ul class="member-list">
+                <li><a href="#">Ipsum dolor sit amet.</a></li>
+                <li><a href="#">например, юмористические.</a></li>
+                <li><a href="#">Ipsum dolor sit amet.</a></li>
+                <li><a href="#">Ipsum dolor sit amet, например</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4 member-grid">
+            <ul class="member-list">
+                <li><a href="#">Ipsum dolor sit amet</a></li>
+                <li><a href="#">Ipsum юмористические</a></li>
+                <li><a href="#">Ipsum dolor</a></li>
+            </ul>
+        </div>
+    
+    </div>
+</div> -->
+    <include file="./Tpl/Public/index_foot.html" />

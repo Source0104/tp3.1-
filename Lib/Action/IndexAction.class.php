@@ -16,6 +16,10 @@ class IndexAction extends Action {
     public function about(){			/****关于我们****/
        $g=M('basic');
         $i=$g->where('id=1')->find();
+        $i['content']= str_replace("&lt;","<",$i['content']);
+        $i['content']= str_replace("&gt;",">",$i['content']);
+        $i['content']= str_replace("&quot;","\"",$i['content']);
+      
         $this->assign('data',$i);
       $this->display();
     }
