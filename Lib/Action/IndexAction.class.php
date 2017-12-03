@@ -24,6 +24,12 @@ class IndexAction extends Action {
       $this->display();
     }
     public function products(){			/**产品展示**/
+      $g=M('basic');
+      $i=$g->where('id=1')->find();
+      $s=M('goods');
+      $goods=$s->select();
+      $this->assign('data',$i);
+      $this->assign('goods',$goods);
       $this->display();
     }
     public function short(){
