@@ -11,8 +11,21 @@ class IndexAction extends Action {
         $this->display('index');
     }
     public function contact(){			/**联系我们**/
-      $this->display();
+      $g=M('basic');
+        $i=$g->where('id=1')->find();
+        $c=M('contact');
+        $contact=$c->where('id=1')->find();
+       $this->assign('data',$i);
+       $this->assign('contact',$contact); 
+       $this->display();
     }
+      public function message(){      /**留言**/
+      $user = M("message"); // 实例化User对象
+      $data=$this->_post();
+      $data['time']=time();
+      $user->add($data); 
+      $this->success('添加成功',U('contact'));
+      }
     public function about(){			/****关于我们****/
        $g=M('basic');
         $i=$g->where('id=1')->find();
@@ -32,10 +45,10 @@ class IndexAction extends Action {
       $this->assign('goods',$goods);
       $this->display();
     }
-    public function short(){
+  /*  public function short(){
       $this->display();
     }
     public function typography(){
       $this->display();
-    }
+    }*/
 }

@@ -44,11 +44,14 @@
 												</div>
 											</a>
 											<div class="tools tools-bottom">
+											<button class="btn btn-xs btn-success" title="">
+																	<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																</button>
 												<a href="{:U('Admin/goodsadd',array('id'=>$v['id']))}">
 													<i class="icon-pencil"></i>
 												</a>
 
-												<a href="#">
+												<a href="{:U('Admin/goodsdel',array('id'=>$v['id']))}">
 													<i class="icon-remove red"></i>
 												</a>
 											</div>

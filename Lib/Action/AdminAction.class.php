@@ -59,14 +59,14 @@ class AdminAction extends Action {
 			$data['title']=$this->_POST('title');
 			
 			$data['content']=$this->_POST('content');
-
+			
 			$data['description']=$this->_POST('description');
 			$data['icp']=$this->_POST('icp');
 			$data['seo']=$this->_POST('seo');
 			$data['company']=$this->_POST('company');
 			if($g->where("id=1")->select()){
 			$g->where("id=1")->save($data);
-			
+		
 			$this->success('修改成功',U('basic'));
 			}else{
 			$g->add($data);	

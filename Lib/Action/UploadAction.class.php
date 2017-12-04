@@ -1,6 +1,6 @@
 <?php 
 /**
-* 文件上传公共方法
+* 
 */
 class UploadAction extends Action {
 	  public function upload(){
@@ -21,20 +21,7 @@ class UploadAction extends Action {
             {// 上传成功 获取上传文件信息
             $info =  $upload->getUploadFileInfo();
             }
-	  	/* $arr_ext = explode('.', $_FILES["upfile"]["name"]);  
-            $path = "./Public/Uploads";  
-            if(!is_dir($path)){  
-                mkdir($path,0777,true);  
-            }  
-            $file_path = $path.uniqid().'.'.$arr_ext[1];  
-            //复制图片  
-            if(move_uploaded_file($_FILES["upfile"]["tmp_name"], $file_path)){  
-               $this->ajaxReturn(array('ok'));  
-            }else{  
-                  $this->ajaxReturn(array('fail'));  
-            }  
-               echo $_FILES["upfile"]; */
-               $file="/Public/Uploads/".$info[0]['savename'];
-               echo json_encode($file);
+            $file="/Public/Uploads/".$info[0]['savename'];
+            echo json_encode($file);
                  }
 }

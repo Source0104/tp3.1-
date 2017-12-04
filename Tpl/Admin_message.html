@@ -52,9 +52,9 @@
 													<th>标题</th>
 													<th>联系人</th>
 													<th>联系方式</th>
+													<th>详情</th>
 													<th class="hidden-480">qq</th>
 													<th>留言时间</th>
-													<th class="hidden-480">操作</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -65,16 +65,10 @@
 													</td>
 													<td>{$v[name]}</td>
 													<td class="hidden-480">{$v[lianxi]}</td>
+													<td>{$v[content]}</td>
 													<td>{$v[qq]}</td>
 													<td><?php echo date('Y-m-d H:i',$v[time]); ?></td>
-													<td>
-												<div class="hidden-sm hidden-xs btn-group">
-											<button class="btn btn-xs btn-success" title="">
-											<i class="ace-icon fa fa-search-plus bigger-120"></i>
-											</button>
-														
-														</div>
-													</td>
+												
 												</tr>
 												<?php } ?>
 												

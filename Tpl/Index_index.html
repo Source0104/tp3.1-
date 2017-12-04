@@ -12,20 +12,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <h1><a class="navbar-brand" href="{:U('Index/index')}">{$data[title]}</a></h1>
+                  <h1><a class="navbar-brand" href="{:U('Index/index')}">{$data[company]}</a></h1>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right torq-menu">
                     <li><a href="{:U('index')}">首页</a></li>
                     <li><a href="{:U('about')}">关于我们</a></li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="<?php echo U('products'); ?>">产品展示</a></li>
-                        <li><a href="<?php echo U('short'); ?>">Short codes</a></li>
-                      </ul>
-                    </li>
+                     <li><a href="<?php echo U('products'); ?>">产品展示</a></li>
                      <li><a href="<?php echo U('contact'); ?>">联系我们</a></li>
                   </ul>
                 </div><!-- /.navbar-collapse -->
@@ -107,8 +101,8 @@
                 <div class="our-team">
                         <h3>Our work我们的工作</h3>
                         <!-- requried-jsfiles-for owl -->
-                        <link href="css/owl.carousel.css" rel="stylesheet">
-                        <script src="js/owl.carousel.js"></script>
+                        <link href="/public/css/owl.carousel.css" rel="stylesheet">
+                        <script src="/public/js/owl.carousel.js"></script>
                             <script>
                                 $(document).ready(function() {
                                     $("#owl-demo").owlCarousel({
