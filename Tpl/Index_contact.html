@@ -1,9 +1,17 @@
     <include file="./Tpl/Public/index_top.html" />
         <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
-    <!-- <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
-      <script src="http://webapi.amap.com/maps?v=1.4.2&key=116c6b4c829a6df57b7e0a4ed6da63f4"></script>
-      <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
-         -->  <body>
+    <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+        <script src="http://webapi.amap.com/maps?v=1.4.2&key=116c6b4c829a6df57b7e0a4ed6da63f4"></script>
+        <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>  
+<style>
+#container {
+                width: 1200px;
+                height: 300px;
+                float: left;
+                position: relative;
+            }
+</style>
+        <body>
         <div class="header about-top" id="home">
             <nav class="navbar navbar-default Torque-nav">
               <div class="container">
@@ -65,19 +73,30 @@
                     </div>
             <div class="clearfix"></div>
                 </div>
-         <!--        <div class="map">
+         <div class="map">
              <h3>地图</h3>
-              <div id="container" style="width:1300px;height:200px"></div>
+              <div id="container" ></div>
          <script>
              var map = new AMap.Map('container', {
                  resizeEnable: true,
-                 zoom:11,
+                 zoom:15,
+                dragEnable: false,
+                keyboardEnable: false,
+                doubleClickZoom: false,
                  center: [{$contact.lng}, {$contact.lat}]
              });
+        new AMap.Marker({
+        map: map,
+        position: [{$contact.lng}, {$contact.lat}],
+        icon: new AMap.Icon({            
+            size: new AMap.Size(40, 50),  //图标大小
+            image: "http://webapi.amap.com/theme/v1.3/images/newpc/way_btn2.png",
+            imageOffset: new AMap.Pixel(0, -60)
+        })        
+    });
          
          </script>
          </div>
-         -->
         </div>
         <!--head-bottom-->
           <include file="./Tpl/Public/index_foot.html" />

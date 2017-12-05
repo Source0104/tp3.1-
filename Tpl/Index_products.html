@@ -40,13 +40,12 @@
                                     <ul class="ace-thumbnails">
                                     <?php foreach($goods as $v){ ?>
                                         <li>
-                                            <a href="<?php echo $v['img']; ?>" data-rel="colorbox">
+                                            <a href="<?php echo $v['img']; ?>" data-lightbox-gallery="gallery1" id="nivo-lightbox-demo">
                                                 <img alt="150x150" style="width:150px;height:150px" src="<?php echo $v['img']; ?>" />
                                                 <div class="text">
                                                     <div class="inner">{$v['content']}</div>
                                                 </div>
                                             </a>
-                                        
                                         </li>
                                         <?php } ?>
                                     </ul>
@@ -54,8 +53,8 @@
                                 </div>
         <div class="clearfix"></div>
                 <!--script-->
-                <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
-                <script type="text/javascript" src="js/nivo-lightbox.min.js"></script>
+                <link rel="stylesheet" type="/public/text/css" href="css/magnific-popup.css">
+                <script type="text/javascript" src="/public/js/nivo-lightbox.min.js"></script>
 				<script type="text/javascript">
 				$(document).ready(function(){
 				    $('#nivo-lightbox-demo a').nivoLightbox({ effect: 'fade' });

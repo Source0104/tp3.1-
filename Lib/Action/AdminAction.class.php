@@ -84,7 +84,7 @@ class AdminAction extends Action {
 		if($this->_post()){
 			$data=$this->_POST();
 			$g=M('contact');
-			if($g->where("id=1")->find){
+			if($g->where("id=1")->find()){
 			$g->where("id=1")->save($data);
 			$this->success('修改成功',U('basic'));
 			}else{
