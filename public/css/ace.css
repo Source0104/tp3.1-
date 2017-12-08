@@ -9619,7 +9619,7 @@ td .lbl:only-child,th .lbl:only-child {
 	position:relative;
 	overflow:hidden;
 	margin:2px;
-	border:2px solid #333
+	border:2px 
 }
 .ace-thumbnails>li>:first-child {
 	display:block;

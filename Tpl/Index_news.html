@@ -1,0 +1,51 @@
+    <include file="./Tpl/Public/index_top.html" />
+<body>
+        <div class="header about-top" id="home">
+            <nav class="navbar navbar-default Torque-nav">
+              <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <h1><a class="navbar-brand" href="{:U('Index/index')}">{$data[company]}</a></h1>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                                 <include file="./Tpl/Public/index_daohang.html" />
+<!-- /.navbar-collapse -->
+    <div class="clearfix"></div>
+              </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+        <!--head-top-->
+        <div class="our-work-gallery">
+            <div class="container">
+                <div  class="work-gallery">
+                    <h3>企业动态</h3>
+                        <div class="col-xs-12">
+                      <div class="bs-example">
+                    <table class="table">
+                    <tbody>
+                    <?php foreach($news as $v){ ?>
+                    <tr>
+                    <td><h4 id="h4.-bootstrap-heading"><a class="anchorjs-link" href="{:U('Index/newsview',array('id'=>$v['id']))}">{$v['title']}<span class="anchorjs-icon"></span></a></h5></td>
+                    <td class="type-info"><?php echo date('Y-m-d',$v['addtime']); ?></td>
+                    </tr>
+                    <?php } ?>
+                    </tbody>
+                    </table>
+                    <div class="clearfix">{$page}</div>
+                    </div>
+                        </div>
+        <div class="clearfix"></div>
+                <!--script-->
+			     <!--script-->
+                </div>
+            </div>
+        </div>
+        <!--head-bottom-->
+    <include file="./Tpl/Public/index_foot.html" />

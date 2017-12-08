@@ -6,7 +6,10 @@
 class IndexAction extends Action {
     public function index(){			/***首页***/
         $g=M('basic');
-        $i=$g->where('id=1')->find();
+        $i=$g->where('id=1')->find();  
+        $s=M('news');
+        $news=$s->order('id desc')->limit('5')->select();
+        $this->assign('news',$news);
         $this->assign('data',$i);
         $this->display('index');
     }
@@ -45,10 +48,28 @@ class IndexAction extends Action {
       $this->assign('goods',$goods);
       $this->display();
     }
-  /*  public function short(){
+    public function news(){
+      $g=M('basic');
+      $i=$g->where('id=1')->find();
+       $s=M('news');
+      import('ORG.Util.Page');
+        $count      = $s->count();
+        $Page       = new Page($count,20);
+        $show       = $Page->show();
+      $news=$s->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+      $this->assign('page',$show);
+      $this->assign('data',$i);
+      $this->assign('news',$news);
       $this->display();
     }
-    public function typography(){
+    public function newsview($id=''){
+        $s=M('news');
+         $news=$s->where("id=$id")->find();
+
+        $this->assign('news',$news);
+        $this->display();
+    }
+    /*public function typography(){
       $this->display();
     }*/
 }

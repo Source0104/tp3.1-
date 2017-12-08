@@ -8,7 +8,7 @@ body{
 }
 /*--fonts--*/
 @font-face{
-	font-family: 'Didact Gothic';
+	font-family: 'Microsoft Yahei';
 	src:url(../fonts/Didact_Gothic/DidactGothic.ttf) format('truetype');
 }
 /*--body--*/
@@ -25,14 +25,14 @@ body{
     min-height: 570px;
 }
 a.navbar-brand{
-    font-family: 'Viga', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 400 !important;
     font-size: 40px !important;
     color: #d73739 !important;
 }
 .torq-menu>li>a {
     color: #fff !important;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 400;
     font-size: 17px;
 }
@@ -59,7 +59,7 @@ ul.dropdown-menu {
 .dropdown-menu>li>a {
     font-weight: 300;
     color: #fff;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
 }
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
     text-decoration: none;
@@ -77,7 +77,7 @@ ul.bn-in-txt{
     list-style-type: none;
 }
 ul.bn-in-txt li h2 {
-    font-family: 'Allerta', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     color: #fff;
     font-weight: 400;
     font-size: 40px;
@@ -85,7 +85,7 @@ ul.bn-in-txt li h2 {
 ul.bn-in-txt li p{
     line-height: 1.8em;
     color: #fff;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 400;
     font-size: 20px;
 }
@@ -115,7 +115,7 @@ a.bn-in:hover{
 }
 .features-section h3 {
     color: #161616;
-    font-family: 'Allerta', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 400;
     font-size: 35px;
     text-align: center;
@@ -151,7 +151,7 @@ a.bn-in:hover{
     padding-top: 12px;
 }
 .left-text h4{
-    font-family: 'Allerta', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-size: 15px;
     font-weight: bold;
     text-align: left;
@@ -192,7 +192,7 @@ ul.loct-strip li{
     padding: 0px 10%;
     line-height: 1.8em;
     text-align: left;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     color: #aaa;
     font-weight: 300;
 }
@@ -201,7 +201,7 @@ ul.loct-strip li{
 }
 .featured-companies h3{
     color: #161616;
-    font-family: 'Allerta', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 400;
     font-size: 35px;
     text-align: center;
@@ -219,7 +219,7 @@ ul.loct-strip li{
 }
 .our-team h3 {
     color: #161616;
-    font-family: 'Allerta', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 400;
     font-size: 35px;
     text-align: center;
@@ -238,7 +238,7 @@ ul.loct-strip li{
     color: #fff;
     text-transform: capitalize;
     margin-bottom: 15px;
-    font-family: 'Viga', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-size: 18px;
     font-weight: 100;
 }
@@ -247,7 +247,7 @@ ul.loct-strip li{
 }
 .head ul li a{
     color: #9A9393;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 300;
     line-height: 1.8em;
     font-size: 16px;
@@ -267,7 +267,7 @@ input.mail2 {
     width: auto;
     margin-bottom: 15px;
     outline: none;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-size: 15px;
 }
 .re_dsgn6 {
@@ -278,7 +278,7 @@ input.mail2 {
     margin: -2px 0px 0px -5px;
     background-color: #d73739;
     color: #fff;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-size: 15px;
     transition: 0.5s all;
 }
@@ -292,13 +292,13 @@ input.mail2 {
     color: #fff;
     text-transform: capitalize;
     margin-bottom: 15px;
-    font-family: 'Viga', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-size: 18px;
     font-weight: 100;
 }
 .social p {
     color: #9A9393;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 300;
     line-height: 1.8em;
     font-size: 16px;
@@ -352,7 +352,7 @@ input.mail2 {
 }
 .div2 p {
     color: #fff;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 300;
     font-size: 16px;
 }
@@ -374,7 +374,7 @@ input.mail2 {
 }
 .about-bottom h2{
     color: #161616;
-    font-family: 'Allerta', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 400;
     font-size: 35px;
     text-align: center;
@@ -391,13 +391,13 @@ img.aprch-img-wid {
     font-size: 22px;
     font-weight: 300;
     margin-bottom: 15px;
-    font-family: 'Allerta', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     text-transform: capitalize;
     text-align: left;
     color: #161616;
 }
 .approach-grid p{
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 300;
     font-size: 17px;
     text-align: left;
@@ -414,7 +414,7 @@ img.aprch-img-wid {
 }
 .quality  h3{
     color: #161616;
-    font-family: 'Allerta', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 400;
     font-size: 35px;
     text-align: center;
@@ -425,7 +425,7 @@ img.aprch-img-wid {
     font-size: 23px;
     font-weight: 300;
     margin-bottom: 15px;
-    font-family: 'Allerta', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     text-transform: capitalize;
     text-align: left;
     color: #161616;
@@ -434,7 +434,7 @@ img.aprch-img-wid {
     list-style-type: none;
 }
 .quality-grid ul li{
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 300;
     font-size: 17px;
     text-align: left;
@@ -454,13 +454,13 @@ img.aprch-img-wid {
     position: relative;
     top: 1px;
     display: inline-block;
-    font-family: 'Glyphicons Halflings';
+    font-family: 'Microsoft Yahei';
     margin-right: 10px;
     color: #d73739;
 }
 .member-grid ul li a{
     color: #aaa;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 400;
     text-transform: capitalize;
     font-size: 15.3px;
@@ -476,7 +476,7 @@ img.aprch-img-wid {
 }
 .memberships h3{
     color: #161616;
-    font-family: 'Allerta', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 400;
     font-size: 35px;
     text-align: center;
@@ -490,7 +490,7 @@ img.aprch-img-wid {
 }
 .work-gallery h3{
     color: #161616;
-    font-family: 'Allerta', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 400;
     font-size: 35px;
     text-align: center;
@@ -527,7 +527,7 @@ img.aprch-img-wid {
 }
 h3.hd {
     color: #161616;
-    font-family: 'Allerta', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 400;
     font-size: 35px;
     text-align: center;
@@ -536,7 +536,7 @@ h3.hd {
 }
 li.grid_1>h4,li.grid_2>h4,li.grid_3>h4,li.grid_4>h4,li.grid_5>h4,li.grid_6>h4,.page-header>h4{
     font-size: 20px;
-    font-family: 'Allerta', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 300;
     text-align: left;
     margin: 0px 0px 15px;
@@ -557,7 +557,7 @@ li.grid_2{
 }
 .contact h1{
     color: #161616;
-    font-family: 'Allerta', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 400;
     font-size: 35px;
     text-align: center;
@@ -566,7 +566,7 @@ li.grid_2{
 }
 .map h3{
     color: #161616;
-    font-family: 'Allerta', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 400;
     font-size: 35px;
     text-align: center;
@@ -621,7 +621,7 @@ ul.details-top{
     margin-bottom: 20px;
 }
 ul.details-top h3,ul.adress-left h3 {
-    font-family: 'Viga', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     color: #42a5f6;
     font-weight: 300;
     font-size: 23px;
@@ -637,11 +637,11 @@ ul.adress-left {
 .reachus ul li {
     line-height: 2em;
     color: #aaa;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
     font-weight: 300;
 }
 .features-section h3,.featured-companies h3,.our-team h3,.about-bottom h2,.quality h3,.memberships h3,.work-gallery h3,h3.hd,.contact h1,.map h3{
-    font-family: 'Viga', sans-serif;
+    font-family: 'Microsoft Yahei', sans-serif;
 }
 #toTop {
     display: none;
@@ -1111,7 +1111,7 @@ ul.adress-left {
     }
     .torq-menu>li>a {
         color: #fff !important;
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: 'Microsoft Yahei', sans-serif;
         font-weight: 400;
         font-size: 15px;
         padding: 5px 0px;

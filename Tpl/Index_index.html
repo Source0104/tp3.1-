@@ -15,14 +15,8 @@
                   <h1><a class="navbar-brand" href="{:U('Index/index')}">{$data[company]}</a></h1>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav navbar-right torq-menu">
-                    <li><a href="{:U('index')}">首页</a></li>
-                    <li><a href="{:U('about')}">关于我们</a></li>
-                     <li><a href="<?php echo U('products'); ?>">产品展示</a></li>
-                     <li><a href="<?php echo U('contact'); ?>">联系我们</a></li>
-                  </ul>
-                </div><!-- /.navbar-collapse -->
+                                   <include file="./Tpl/Public/index_daohang.html" />
+<!-- /.navbar-collapse -->
                     <div class="clearfix"></div>
               </div><!-- /.container-fluid -->
             </nav>
@@ -67,6 +61,27 @@
                         <div class="clearfix"></div>
                     </div>
                     </div> 
+					<br/>
+                    <br/>
+                    <div class="bs-example">
+                    <table class="table">
+                    <tbody>
+                     <tr>
+                   <td><h2 id="h2.-bootstrap-heading">企业动态<a class="anchorjs-link" href="#h2.-bootstrap-heading"><span class="anchorjs-icon"></span></a></h1></td>
+                    <td class="type-info"><a href="<?php echo U('news'); ?>">查看更多--></a></td>
+                    <tr/>
+                    <?php foreach($news as $v){ ?>
+                    <tr>
+                    <td><h4 id="h4.-bootstrap-heading"><a class="anchorjs-link" href="{:U('Index/newsview',array('id'=>$v['id']))}">{$v['title']}<span class="anchorjs-icon"></span></a></h5></td>
+                    <td class="type-info"><?php echo date('Y-m-d',$v['addtime']); ?></td>
+                    </tr>
+                    <?php } ?>
+                    </tbody>
+                    </table>
+                    <div class="clearfix"></div>
+                    </div>
+                      <br/>
+                    <br/>
               <div class="clearfix"></div>
                 <div class="our-team">
                         <h3>Our work我们的工作</h3>
