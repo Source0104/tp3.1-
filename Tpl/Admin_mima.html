@@ -1,0 +1,126 @@
+	<include file="./Tpl/Public/top.html" />
+
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+			<!-- #section:basics/sidebar -->
+		<div id="sidebar" class="sidebar responsive">
+		<include file="./Tpl/Public/left.html" />
+		</div>
+
+			<!-- /section:basics/sidebar -->
+			<div class="main-content">
+				<!-- #section:basics/content.breadcrumbs -->
+				<div class="breadcrumbs" id="breadcrumbs">
+					<ul class="breadcrumb">
+						<li>
+							<i class="ace-icon fa fa-home home-icon"></i>
+							<a href="index.html">网站设置</a>
+						</li>
+					</ul><!-- /.breadcrumb -->
+
+					<!-- #section:basics/content.searchbox -->
+					<!-- /.nav-search -->
+					<!-- /section:basics/content.searchbox -->
+				</div>
+
+				<div class="page-content">
+					<!-- /section:settings.box -->
+					<div class="page-content-area">
+
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="row center">
+								<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+								<form class="form-horizontal" role="form" action="{:U('Admin/mima')}" method="post" enctype="multipart/form-data">
+									<!-- #section:elements.form -->
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 请输入现密码</label>
+										<div class="col-sm-9">
+											<input type="password" name="xian" id="form-field-1" placeholder="请输入现密码" value="" class="col-xs-10 col-sm-5" />
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 请输入修改密码</label>
+										<div class="col-sm-9">
+											<input type="password" name="password" id="form-field-1" placeholder="请输入修改密码" value="" class="col-xs-10 col-sm-5" />
+										</div>
+									</div>
+										
+									<div  class="clearfix form-actions">
+										<div align="center">
+											<button class="btn btn-info" type="submit">
+												<i class="ace-icon fa fa-check bigger-110"></i>
+												立即提交
+											</button>
+									  </div>
+									</div>
+									</form>
+									</div>
+									</div>
+									</div>
+								</div>
+							</div>
+					 </div> <!-- /.row -->
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content-area -->
+				</div><!-- /.page-content -->
+			</div><!-- /.main-content -->
+
+		<include file="./Tpl/Public/footer.html" />
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!--[if !IE]> -->
+			<script type="text/javascript">
+				window.jQuery || document.write("<script src='__PUBLIC__/assets/js/jquery.min.js'>"+"<"+"/script>");
+			</script>
+		<!-- <![endif]-->
+		<!--[if IE]>
+			<script type="text/javascript">
+			 window.jQuery || document.write("<script src='../public/assets/js/jquery1x.min.js'>"+"<"+"/script>");
+			</script>
+		<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='__PUBLIC__/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="__PUBLIC__/assets/js/bootstrap.min.js"></script>
+		<!--[if lte IE 8]>
+		  <script src="../public/assets/js/excanvas.min.js"></script>
+		<![endif]-->
+		<script src="__PUBLIC__/assets/js/jquery-ui.custom.min.js"></script>
+		<script src="__PUBLIC__/assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="__PUBLIC__/assets/js/ace-elements.min.js"></script>
+		<script src="__PUBLIC__/assets/js/ace.min.js"></script>
+		<link rel="stylesheet" href="__PUBLIC__/js/kindeditor/themes/default/default.css" />
+		 <script charset="utf-8" src="__PUBLIC__/js/kindeditor/kindeditor-min.js"></script>
+		 <script charset="utf-8" src="__PUBLIC__/js/kindeditor/lang/zh_CN.js"></script>
+		 <script type="text/javascript">
+		$(function(){
+		    var editor;
+		    KindEditor.ready(function(K) {
+		        editor = K.create('textarea[name="content"]', {
+		            allowFileManager : true,
+		            autoHeightMode : true,
+		            afterCreate : function() {
+		                this.loadPlugin('autoheight');
+		            },
+		            afterUpload : function(url) {
+		                var firstimageoption = '<option value="' + url + '">' + url + '</option>';
+		                var selectoption = '<option value="' + url + '" selected="selected">' + url + '</option>';
+		                $("#firstimage").append(firstimageoption);
+		                $("#images").append(selectoption);
+		            }
+		        });
+		    });
+		 })
+		</script>
+
+	</body>
+</html>

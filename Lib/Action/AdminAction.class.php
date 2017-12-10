@@ -36,6 +36,9 @@ class AdminAction extends Action {
 	 $this->success('退出成功！','login');
 	}
 	function basic(){
+			if(!session('username')){
+		 	$this->error('请先登录',U('Admin/login'));
+		} 
 		if($this->isPost()){
 			import('ORG.Net.UploadFile');
 			$upload = new UploadFile();// 实例化上传类
@@ -80,7 +83,30 @@ class AdminAction extends Action {
 		}
 		 
 	}
+	public function mima(){
+			if(!session('username')){
+		 	$this->error('请先登录',U('Admin/login'));
+		} 
+		if($this->_post()){
+			$user = M("User"); // 实例化User对象
+			$data['password']=MD5($this->_POST('password'));	//	获取输入的密码
+			$xian=MD5($this->_POST('xian'));
+			$i=$user->where("id=1")->find();
+			if ($xian==$i['password']) {
+					$user->where("id=1")->save($data);
+					$this->success('修改成功',U('Admin/login'));
+				}else{
+					$this->error('现密码错误，请确认后重试',U('Admin/index'));
+				}
+
+		}else{
+			$this->display();
+		}
+	}
 	public function contact(){
+			if(!session('username')){
+		 	$this->error('请先登录',U('Admin/login'));
+		} 
 		if($this->_post()){
 			$data=$this->_POST();
 			$g=M('contact');
@@ -100,12 +126,18 @@ class AdminAction extends Action {
 		}
 	}
 	public function goods(){
+			if(!session('username')){
+		 	$this->error('请先登录',U('Admin/login'));
+		} 
 			$g=M('goods');
 			$i=$g->select();
 		    $this->assign('data',$i);
 			$this->display();
 	}
 	public function goodsadd($id=''){
+			if(!session('username')){
+		 	$this->error('请先登录',U('Admin/login'));
+		} 
 		if($this->_post()){
 			$data=$this->_POST();
 			$g=M('goods');
@@ -128,6 +160,9 @@ class AdminAction extends Action {
 		}
 	}
 	public function news(){
+			if(!session('username')){
+		 	$this->error('请先登录',U('Admin/login'));
+		} 
 			$g=M('news');
 			import('ORG.Util.Page');
 			$count      = $g->count();
@@ -139,6 +174,9 @@ class AdminAction extends Action {
 			$this->display();
 	}
 	public function newsadd($id=''){
+			if(!session('username')){
+		 	$this->error('请先登录',U('Admin/login'));
+		} 
 		if($this->_post()){
 			$data=$this->_POST();
 			$g=M('news');
@@ -161,18 +199,27 @@ class AdminAction extends Action {
 		}
 	}
 	public function newsdel($id){
+			if(!session('username')){
+		 	$this->error('请先登录',U('Admin/login'));
+		} 
 		$a=M('news');
 		$a->where("id=$id")->delete();
 		$this->success('删除成功',U('news'));
 
 	}
 	public function goodsdel($id){
+			if(!session('username')){
+		 	$this->error('请先登录',U('Admin/login'));
+		} 
 		$a=M('goods');
 		$a->where("id=$id")->delete();
 		$this->success('删除成功',U('goods'));
 
 	}
 	public function message(){
+			if(!session('username')){
+		 	$this->error('请先登录',U('Admin/login'));
+		} 
 		$g=M('message');
 		import('ORG.Util.Page');// 导入分页类
 		$count      = $g->count();// 查询满足要求的总记录数
